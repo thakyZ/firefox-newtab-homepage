@@ -1,0 +1,53 @@
+{
+  "manifest_version": 2,
+  "name": "NewTab Homepage",
+  "version": "1.0",
+
+  "description": "When a new tab is opened it goes to the homepage.",
+
+  "icons": {
+    "48": "icons/icon-48.png"
+  },
+  "applications": {
+    "gecko": {
+      "id": "newtab-homepage@nekogaming.xyz",
+      "strict_min_version": "69.0b13"
+    }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "newtab-homepage@nekogaming.xyz",
+      "strict_min_version": "69.0b13"
+    }
+  },
+  "background": {
+    "scripts": ["js/utils.js"]
+  },
+  "chrome_settings_overrides": { },
+  "chrome_url_overrides" : {
+    "newtab": "html/newtab.html"
+  },
+  "omnibox": {
+    "keyword" : "newtab"
+  },
+  "permissions": [
+    "browserSettings",
+    "history",
+    "tabs",
+    "activeTab",
+    "urlbar",
+    "search"
+  ],
+  "incognito": "spanning",
+  "experiment_apis": {
+    "experiments_urlbar": {
+      "schema": "experiments/urlbar/schema.json",
+      "parent": {
+        "scopes": ["addon_parent"],
+        "paths": [["experiments", "urlbar"]],
+        "script": "experiments/urlbar/api.js"
+      }
+    }
+  },
+  "default_locale": "en"
+}

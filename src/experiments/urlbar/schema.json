@@ -1,0 +1,19 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+ [
+  {
+    "namespace": "experiments.urlbar",
+    "description": "APIs supporting urlbar experiments",
+    "functions": [
+      {
+        "name": "clearInput",
+        "type": "function",
+        "async": true,
+        "description": "Sets urlbar.value to the empty string and the pageproxystate to invalid.",
+        "parameters": []
+      }
+    ]
+  }
+]

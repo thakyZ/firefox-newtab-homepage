@@ -1,0 +1,56 @@
+{
+  "name": "firefox-newtab-homepage",
+  "version": "15.0.0",
+  "description": "When a new tab is opened it goes to the homepage.",
+  "author": {
+    "name": "Neko Boi Nick",
+    "email": "nekoboinick@gmail.com"
+  },
+  "homepage": "https://github.com/thakyz/firefox-newtab-homepage/",
+  "bugs": {
+    "email": "kontakt@agenedia.com"
+  },
+  "license": "MPL 2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thakyz/firefox-newtab-homepage/"
+  },
+  "private": true,
+  "browserslist": [
+    "Firefox >= 78"
+  ],
+  "devDependencies": {
+    "eslint": "7.21.0",
+    "eslint-plugin-compat": "3.9.0",
+    "eslint-plugin-no-unsanitized": "3.1.4",
+    "eslint-plugin-promise": "4.3.1",
+    "eslint-plugin-sort-requires": "2.1.0",
+    "eslint-plugin-xss": "0.1.10",
+    "gulp": "4.0.2",
+    "gulp-eslint": "6.0.0",
+    "gulp-htmllint": "0.0.19",
+    "gulp-jsdoc3": "3.0.0",
+    "gulp-stylelint": "13.0.0",
+    "htmllint": "0.8.0",
+    "jsdoc": "3.6.6",
+    "jsdoc-strip-async-await": "0.1.0",
+    "npm-run-all": "4.1.5",
+    "stylelint": "13.11.0",
+    "stylelint-csstree-validator": "1.9.0",
+    "stylelint-order": "4.1.0",
+    "web-ext": "5.5.0"
+  },
+  "scripts": {
+    "build": "cd src && web-ext build -a ../dist",
+    "docs": "gulp docs",
+    "lint": "npm-run-all lint:*",
+    "lint:css": "gulp lint-css",
+    "lint:js": "gulp lint-js",
+    "lint:html": "gulp lint-html",
+    "lint:webext": "cd src && web-ext lint",
+    "run:nightly": "cd src && web-ext run --firefox=\"/Applications/Firefox Nightly.app\"",
+    "run:beta": "cd src && web-ext run --firefox=\"/Applications/Firefox Beta.app\"",
+    "run:stable": "cd src && web-ext run --firefox=\"/Applications/Firefox Stable.app\"",
+    "run:esr": "cd src && web-ext run --firefox=\"/Applications/Firefox ESR.app\""
+  }
+}
