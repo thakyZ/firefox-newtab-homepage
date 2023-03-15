@@ -12,10 +12,7 @@ const { XPCOMUtils } = ChromeUtils.import(
 
 XPCOMUtils.defineLazyModuleGetters(this, {
   BrowserWindowTracker: "resource:///modules/BrowserWindowTracker.jsm",
-  Preferences: "resource://gre/modules/Preferences.jsm",
-  UrlbarProviderExtension: "resource:///modules/UrlbarProviderExtension.jsm",
-  UrlbarResult: "resource:///modules/UrlbarResult.jsm",
-  UrlbarView: "resource:///modules/UrlbarView.jsm",
+  Preferences: "resource://gre/modules/Preferences.jsm"
 });
 
 XPCOMUtils.defineLazyGetter(

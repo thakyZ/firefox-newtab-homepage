@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /* global URI_REGEX, defaults, utils, browser */
 const NEW_TAB_PAGE = 'html/newtab.html';
@@ -36,7 +36,7 @@ const newtab = {
       // background, for support of add-ons like Gesturefy; we set loadReplace to true to disable the back button
       var updating = browser.tabs.update(tabId, { url : url, loadReplace : false });
       updating.then((_tab) => {
-        browser.experiments.urlbar.clearInput();
+        testProvider.clearInput();
       })
     });
 

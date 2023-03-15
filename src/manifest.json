@@ -21,7 +21,10 @@
     }
   },
   "background": {
-    "scripts": ["js/utils.js"]
+    "scripts": [
+      "js/utils.js",
+      "js/background.js"
+    ]
   },
   "chrome_settings_overrides": { },
   "chrome_url_overrides" : {
